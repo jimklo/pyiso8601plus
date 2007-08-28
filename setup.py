@@ -9,12 +9,37 @@ This module parses the most common forms of ISO 8601 date strings (e.g.
 2007-01-14T20:34:22+00:00) into datetime objects.
 
 >>> import iso8601
->>> iso8601.parse_date("2007-01-25T12:00:00Z")
+>>> iso8601.parse_datetime("2007-01-25T12:00:00Z")
 datetime.datetime(2007, 1, 25, 12, 0, tzinfo=<iso8601.iso8601.Utc ...>)
 >>>
 
 Changes
 =======
+
+0.2
+---
+
+This is a non-backwards compatible release. To get the same behaviour
+as the 0.1.x releases change from::
+
+  iso8601.parse_date("my date")
+
+to::
+
+  iso8601.parse_datetime("my date", strict=False)
+
+Otherwise you will get datetime.date objects back, if the date parses at
+all.
+
+* Changed the parse_date function to only parse and return datetime.date
+  objects, and added a parse_datetime function to parse and return
+  datetime.datetime objects. This is more explicit. Passing a date 
+  without a time to parse_datetime causes a ParseError, and vice versa.
+* Added a strict flag to both to control how strictly ISO 8601 is
+  adhered to. With strict=False some slightly non-spec cases are 
+  allowed. For example dates without leading zeroes are allowed, and 
+  datetimes without a timezone are allowed.
+* Fixed a problem with default_timezone, it was always using UTC.
 
 0.1.3
 -----
@@ -41,7 +66,7 @@ Changes
 
 setup(
     name="iso8601",
-    version="0.1.3",
+    version="0.2",
     description=long_description.split("\n")[0],
     long_description=long_description,
     author="Michael Twomey",
