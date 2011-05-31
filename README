@@ -23,4 +23,8 @@ References:
 * http://hydracen.com/dx/iso8601.htm - more detailed enumeration of
   valid formats.
 
-See the LICENSE file for the license this package is released under.
+See the LICENSE.* files for the license this package is released under. 
+    
+* Version 0.15 uses Apache License, Version 2.0
+
+* Versions 0.14 and prior use MIT License
