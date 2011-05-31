@@ -109,3 +109,18 @@ def test_space_separator():
     assert d.second == 34
     assert d.microsecond == 0
     assert d.tzinfo == iso8601.UTC
+    
+    
+def test_date_only():
+    """Handle a date only
+    
+    """
+    d = iso8601.parse_date("2007-06-23")
+    assert d.year == 2007
+    assert d.month == 6
+    assert d.day == 23
+    assert d.hour == 0
+    assert d.minute == 0
+    assert d.second == 0
+    assert d.microsecond == 0
+    assert d.tzinfo == iso8601.UTC
