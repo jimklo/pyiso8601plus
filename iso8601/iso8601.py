@@ -98,7 +98,7 @@ def parse_date(datestring, default_timezone=UTC):
     else:
         groups["fraction"] = int(float("0.%s" % groups["fraction"]) * 1e6)
         
-    if not( groups.has_key("hour") and groups.has_key("minute") and groups.has_key("second")):
+    if groups["hour"] == None and groups["minute"] == None and groups["second"] == None:
         return datetime(int(groups["year"]), int(groups["month"]), int(groups["day"]), tzinfo=tz)
     else:
         return datetime(int(groups["year"]), int(groups["month"]), int(groups["day"]),
