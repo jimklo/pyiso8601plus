@@ -1,0 +1,5 @@
+/.project
+/.pydevproject
+/dist/
+/iso8601plus.egg-info/
+*.pyc
