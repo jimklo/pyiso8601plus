@@ -15,12 +15,16 @@ datetime.datetime(2007, 1, 25, 12, 0, tzinfo=<iso8601.iso8601.Utc ...>)
 
 Changes
 =======
+0.1.6
+-----
+* Removed Apache 2.0 license, now MIT license, same as original
+
 0.1.5
 -----
 
 * Forked original version by Michael Twomey located http://code.google.com/p/pyiso8601/ 
 * Added the ability to parse date without any time information.
-
+* Apache 2.0 license
 
 0.1.4
 -----
@@ -53,7 +57,7 @@ Changes
 
 setup(
     name="iso8601plus",
-    version="0.1.5",
+    version="0.1.6",
     description=long_description.split("\n")[0],
     long_description=long_description,
     author="Jim Klo",
