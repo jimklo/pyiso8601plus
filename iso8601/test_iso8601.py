@@ -1,5 +1,5 @@
 '''
-Copyright 2011 SRI International
+Copyright (c) 2011 SRI International
 Copyright (c) 2007 Michael Twomey
 
 @author: jklo

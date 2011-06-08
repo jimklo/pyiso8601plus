@@ -6,7 +6,7 @@ Basic usage:
 datetime.datetime(2007, 1, 25, 12, 0, tzinfo=<iso8601.iso8601.Utc ...>)
 >>>
 
-Copyright 2011 SRI International
+Copyright (c) 2011 SRI International
 Copyright (c) 2007 Michael Twomey
 """
 

@@ -20,7 +20,7 @@ Changes
 
 * Forked original version by Michael Twomey located http://code.google.com/p/pyiso8601/ 
 * Added the ability to parse date without any time information.
-* Relicensed as Apache 2
+
 
 0.1.4
 -----
@@ -60,5 +60,5 @@ setup(
     author_email="jim.klo@sri.com",
     url="https://github.com/jimklo/pyiso8601plus",
     packages=["iso8601"],
-    license="Apache License, Version 2.0",
+    license="The MIT License (MIT)",
 )
